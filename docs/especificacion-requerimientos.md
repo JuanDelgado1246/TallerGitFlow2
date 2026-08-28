@@ -4,11 +4,9 @@
 
 ## 2. Integrantes
 
-- Nombre:
-- Nombre:
-- Nombre:
-- Nombre:
-- Nombre:
+- Nombre: Juan David Delgado
+- Nombre: Jeronimo Mazo Diez
+- Nombre: Juan José Ortega Aguilera
 
 ## 3. Requerimientos Funcionales
 
