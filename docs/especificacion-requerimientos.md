@@ -42,23 +42,40 @@ El registro solo se realizará si todas las condiciones son válidas.
 La tutoría queda registrada correctamente en el sistema con un identificador único y el profesor recibe un mensaje de confirmación.
 
 
-### RF-02 - [Nombre del requerimiento]
+### RF-02 - [consulta-tutorias]
 
 #### Resumen
-
+El sistema deberá permitir a los estudiantes consultar las tutorías disponibles para una fecha determinada y, opcionalmente, filtrar los resultados por asignatura o tema de interés.
 #### Entradas
 
-| Entrada | Tipo de dato | Descripción |
-|---|---|---|
+
+| Entrada           | Tipo de dato | Descripción                                                                            |
+| ----------------- | ------------ | -------------------------------------------------------------------------------------- |
+| Fecha de consulta | Date         | Fecha para la cual el estudiante desea consultar las tutorías.                         |
+| Asignatura o tema | String       | Criterio opcional utilizado para filtrar las tutorías según el interés del estudiante. |
+
 
 #### Reglas o condiciones
-
+La fecha de consulta es obligatoria.
+La asignatura o tema es opcional.
+Si se proporciona un tema, solo deberán mostrarse las tutorías que correspondan con este.
+Solo deberán mostrarse tutorías que correspondan con los criterios de búsqueda.
+Si no existen tutorías que coincidan con la búsqueda, el sistema deberá informar al estudiante.
 #### Salidas
 
-| Salida | Tipo de dato | Descripción |
-|---|---|---|
+| Salida                   | Tipo de dato   | Descripción                                                          |
+| ------------------------ | -------------- | -------------------------------------------------------------------- |
+| Identificador de tutoría | Integer/String | Identificador de la tutoría encontrada.                              |
+| Tema                     | String         | Tema de la tutoría.                                                  |
+| Profesor responsable     | String         | Profesor encargado de la tutoría.                                    |
+| Fecha                    | Date           | Fecha de realización de la tutoría.                                  |
+| Hora                     | Time           | Hora de inicio de la tutoría.                                        |
+| Cupos disponibles        | Integer        | Cantidad de estudiantes que aún pueden inscribirse.                  |
+| Mensaje                  | String         | Informa si no se encontraron tutorías que coincidan con la búsqueda. |
+
 
 #### Resultado esperado
+El estudiante recibe una lista de las tutorías disponibles que coinciden con los criterios de búsqueda, mostrando su información y los cupos disponibles. Si no existen coincidencias, recibe un mensaje informativo.
 
 
 ### RF-03 - [Nombre del requerimiento]
