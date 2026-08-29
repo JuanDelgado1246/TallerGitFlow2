@@ -78,23 +78,38 @@ Si no existen tutorías que coincidan con la búsqueda, el sistema deberá infor
 El estudiante recibe una lista de las tutorías disponibles que coinciden con los criterios de búsqueda, mostrando su información y los cupos disponibles. Si no existen coincidencias, recibe un mensaje informativo.
 
 
-### RF-03 - [Nombre del requerimiento]
+### RF-03 - [Inscripción a una tutoría]
 
 #### Resumen
+Permitir que un estudiante solicite y registre su inscripción en una tutoría disponible utilizando su código estudiantil y el identificador de la tutoría.
 
 #### Entradas
 
-| Entrada | Tipo de dato | Descripción |
-|---|---|---|
+| Entrada                     | Tipo de dato | Descripción                                                                 |
+| --------------------------- | ------------ | --------------------------------------------------------------------------- |
+| Código estudiantil          | String       | Código que identifica al estudiante que desea inscribirse.                  |
+| Identificador de la tutoría | String       | Identificador único de la tutoría a la que el estudiante desea inscribirse. |
+
 
 #### Reglas o condiciones
+-El estudiante debe encontrarse activo en la Universidad.
+-La tutoría debe existir en el sistema.
+-La tutoría debe tener al menos un cupo disponible.
+-El estudiante no debe estar previamente inscrito en la tutoría.
+-Si todas las condiciones se cumplen, se debe registrar la inscripción y disminuir en uno la cantidad de cupos disponibles.
+-Si alguna condición no se cumple, la inscripción no debe realizarse y el sistema debe informar el motivo.
 
 #### Salidas
 
-| Salida | Tipo de dato | Descripción |
-|---|---|---|
+| Salida                         | Tipo de dato | Descripción                                                                       |
+| ------------------------------ | ------------ | --------------------------------------------------------------------------------- |
+| Confirmación de inscripción    | String       | Mensaje que informa que la inscripción fue realizada exitosamente.                |
+| Mensaje de error               | String       | Mensaje que informa el motivo por el cual no fue posible realizar la inscripción. |
+| Cupos disponibles actualizados | Integer      | Cantidad de cupos restantes después de una inscripción exitosa.                   |
+
 
 #### Resultado esperado
+El sistema registra correctamente la inscripción del estudiante, actualiza la cantidad de cupos disponibles de la tutoría y muestra un mensaje de confirmación. Si alguna de las condiciones requeridas no se cumple, no registra la inscripción y muestra el motivo correspondiente.
 
 
 ### RF-04 - [Nombre del requerimiento]
