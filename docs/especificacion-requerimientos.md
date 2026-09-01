@@ -142,3 +142,54 @@ Permitir que un estudiante que se encuentre inscrito en una tutoría pueda cance
 #### Resultado esperado
 
 La inscripción del estudiante es eliminada, se libera nuevamente el cupo correspondiente de la tutoría y se informa al estudiante que la cancelación fue realizada correctamente.
+### Conflictos encontrados
+El pull request que se hizo en la feature/RF04 provoco no solo que se sustituyera el texto base que del archivo en ese requerimiento sino que ademas elimino el RF01 y lo sustituyo con la informacion base del documento. Se resolvio haciendo un pull request desde develop para implementar el requerimiento con la informacion completa y asi poder hacer el pull request sin que develop deje el RF01 vacion
+## 4. Gestión de Versiones
+- main
+- develop
+- feature/rf01-registro-tutoria
+- feature/rf02-consulta-tutorias
+- feature/rf03-inscripcion-tutoria
+- feature/rf04-cancelacion-inscripcion
+
+main
+   ↓
+develop
+   ↓
+feature/rf01-registro-tutoria
+   ↓
+develop
+   ↓
+feature/rf02-consulta-tutorias
+   ↓
+develop
+   ↓
+   
+feature/rf03-inscripcion-tutoria
+   ↓
+develop
+   ↓
+feature/rf04-cancelacion-inscripcion
+(Conflicto con feature/rf01-registro-tutoria)
+   ↓
+develop
+   ↓
+feature/rf01-registro-tutoria
+   ↓
+develop
+   ↓
+main
+## REFLEXION
+1)Encontramos una forma mucho mas organizada y dinámica de trabajar código, ya que las ramas permiten centrarse únicamente en una parte del código sin afectar lo demás 
+2)La rama develop representa la estructura completa preparada para correcciones antes de presentar el código en el main
+3)Que se puede trabajar la información por separado, el desarrollador en un principio no debe preocuparse por la integración de los demás códigos hasta el momento en el que tenga que enviarlo a la rama develop además que permite mantener un registro sobre los procesos hechos y los faltantes
+4)Van a demorarse mucho mas de lo necesario ya que no seria algo practico, cada uno de los integrantes necesita comprobar y corregir lo que hacen y si todos los hacen al mismo tiempo no se podria trabajar correctamente, las ramas ofrecen un espacio para que cada integrante pueda desarrollar sus ideas como le plazca hasta poder llegar al resultado esperado 
+5)Markdown Ofrece un método practico para organizar la documentación de un repositorio ya que permite trabajar como si fuera un Word en el cual puedes elegir un estilo para tus líneas de texto, facilitando la lectura 
+6)El responsable de integrar los cambios del equipo debe prevenir dañar el planteamiento de código de los demás integrantes y hacer que el código funcione correctamente
+
+
+    
+
+
+
+main
